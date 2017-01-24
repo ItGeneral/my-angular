@@ -1,5 +1,9 @@
-<nav>
-  <a routerLink="/register" routerLinkActive="active">注册</a>
-  <a routerLink="/login" routerLinkActive="active">登录</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="user-nav">
+  <ul>
+    <li routerLink="/login" routerLinkActive="active">登录</li>
+    <li routerLink="/register" routerLinkActive="active">注册</li>
+  </ul>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

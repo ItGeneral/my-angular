@@ -5,9 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import {appRouting} from "./app.routing";
 import {UserModule} from "./user/user.module";
+import {AboutModule} from "./about/about.module";
 
 
 
@@ -15,14 +15,14 @@ import {UserModule} from "./user/user.module";
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     appRouting,
-    UserModule
+    UserModule,
+    AboutModule
   ],
   bootstrap: [AppComponent]
 })

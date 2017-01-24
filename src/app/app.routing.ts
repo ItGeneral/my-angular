@@ -10,9 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
-  {path:'', redirectTo:'', pathMatch:'full'},
+  {path:'', redirectTo:'home', pathMatch:'full'},
   {path:'home', component: HomeComponent},
-  {path:'about', component: AboutComponent},
+  {path:'about', loadChildren: './about/about.module#AboutModule'},
   {path:'users', loadChildren: './user/user.module#UserModule'}
 ];
 
