@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import {appRouting} from "./app.routing";
+import {UserModule} from "./user/user.module";
 
 
 
@@ -14,13 +15,14 @@ import {appRouting} from "./app.routing";
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    appRouting
+    appRouting,
+    UserModule
   ],
   bootstrap: [AppComponent]
 })

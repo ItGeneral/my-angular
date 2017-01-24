@@ -1,3 +1,6 @@
 .content{
-    background-color: aqua;
+  width: 960px;
+  max-height: 1024px;
+  text-align: center;
+  margin-top: 50px;
 }

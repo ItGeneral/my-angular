@@ -13,6 +13,7 @@ const appRoutes: Routes = [
   {path:'', redirectTo:'', pathMatch:'full'},
   {path:'home', component: HomeComponent},
   {path:'about', component: AboutComponent},
+  {path:'users', loadChildren: './user/user.module#UserModule'}
 ];
 
 export const appRouting:ModuleWithProviders  = RouterModule.forRoot(appRoutes);
