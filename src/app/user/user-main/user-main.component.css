@@ -1,5 +1,8 @@
-.user-nav ul li{
-  cursor: pointer;
-  list-style: none;
-  padding-top: 10px;
+.nav>li{
+  width: 200px;
 }
+.nav-stacked{
+  padding-top: 50px;
+  float: right;
+}
+

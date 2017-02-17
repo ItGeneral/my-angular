@@ -15,4 +15,11 @@ body {
 html {
   min-height: 100%;
   position: relative;
+  background: #ebebeb;
+}
+.root{
+  background:#fff;
+}
+body{
+  background-color:#ebebeb;
 }

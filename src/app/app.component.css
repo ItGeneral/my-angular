@@ -1,17 +1,17 @@
-.main-nav {
-  height: 50px;
-  min-height: 50px;
-  padding: 0;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.24);
-  text-align: center;
+main-nav ul{
+  background-color: #00ae66;
 }
 nav{
   padding-top: 10px;
 }
 nav a{
   text-decoration: none;
-  padding-right: 50px;
+  padding-right: 20px;
   color: white;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+  text-decoration: none;
+  background-color: #00ae66;
 }
 .main-container {
   padding-top: 10px;
