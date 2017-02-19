@@ -35,3 +35,6 @@ nav a{
   color: #fff;
   background-color: #00ae66;
 }
+.notActive{
+  background-color: #fff;
+}
