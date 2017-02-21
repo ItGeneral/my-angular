@@ -16,6 +16,6 @@ import {UserLoginComponent} from "./user-login/user-login.component";
     UserRegisterComponent,
     UserLoginComponent
   ],
-  exports:[UserMainComponent]
+  exports:[UserMainComponent] //declarations 的子集，可用于其它模块的组件模板。
 })
 export class UserModule { }

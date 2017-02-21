@@ -11,13 +11,13 @@ import {HttpService} from "./http.service";
   providers:[NgClass]
 })
 export class AppComponent extends HttpService implements OnInit{
-
+  private str: string;
   //生命周期钩子  Angular提供了一些接口，用来介入组件生命周期的几个关键时间点：刚创建时、每次变化时，以及最终被销毁时。
   //初始化加载时执行this.get()方法获取数据
   ngOnInit(): void {
-    //this.get();
-    console.log("----1----")
+
   }
+
 
   isOn = true;
   isDisabled = false;
