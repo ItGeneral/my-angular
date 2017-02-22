@@ -11,7 +11,7 @@ export class Params{
 
   private _key : string;
 
-  private _value : Object;
+  private _value : string;
 
   get key(): string {
     return this._key;
@@ -21,11 +21,12 @@ export class Params{
     this._key = value;
   }
 
-  get value(): Object {
+
+  get value(): string {
     return this._value;
   }
 
-  set value(value: Object) {
+  set value(value: string) {
     this._value = value;
   }
 }
