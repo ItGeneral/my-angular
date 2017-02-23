@@ -1,6 +1,7 @@
 # MyAngular
 
 ## 功能进度
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
 ### 导航路由
 路由配置请参考app.routing.ts文件；
@@ -10,9 +11,6 @@
 http服务类请参考http.service.ts，所有需要使用http请求的模块，只要继承HttpService就可以直接调用里面的方法；
 前后端分离，进行请求时涉及到跨域请求，需要在后端设置response的header `response.setHeader("Access-Control-Allow-Origin", "*")`；
 使用方式请参考home.component.ts文件。
-
-
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
