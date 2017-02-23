@@ -1,10 +1,11 @@
 <div class="home">
-    <div>welcome to Home</div>
+    <div>welcome to Home {{obj}}</div>
     <div>
-      <ul *ngFor="let o of obj">
-        <li>{{o.id}}</li>
-        <li>{{o.cityName}}</li>
-        <li>{{o.newType}}</li>
+      <ul *ngFor="let item of obj; let i = index">
+        {{i}}  {{item.id}}
+        <li>{{item.id}}</li>
+        <li>{{item.cityName}}</li>
+        <li>{{item.newType}}</li>
       </ul>
     </div>
 </div>
