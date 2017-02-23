@@ -1,7 +1,7 @@
 # MyAngular
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
 ## 功能进度
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
 ### 导航路由
 路由配置请参考app.routing.ts文件；
