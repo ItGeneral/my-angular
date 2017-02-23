@@ -1,3 +1,10 @@
 <div class="home">
     <div>welcome to Home</div>
+    <div>
+      <ul *ngFor="let o of obj">
+        <li>{{o.id}}</li>
+        <li>{{o.cityName}}</li>
+        <li>{{o.newType}}</li>
+      </ul>
+    </div>
 </div>

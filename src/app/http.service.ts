@@ -7,13 +7,12 @@ import {Headers, Http, Response, RequestOptions, URLSearchParams, Jsonp} from "@
 import 'rxjs/add/operator/toPromise';
 import {Observable} from "rxjs";
 import {Params} from "./app.params.component";
-// 并且providers: [HttpService]，providers数组告诉 Angular，当它创建新的AppComponent组件时，也要创建一个Service的新实例
 
-
+// providers: [HttpService]，providers数组告诉 Angular，当它创建新的AppComponent组件时，也要创建一个Service的新实例
 @Injectable()
 export class HttpService{
 
-  constructor(private http: Http, private jsonp : Jsonp) { }
+  constructor(private http: Http, private jsonp : Jsonp) {}
 
   private headers = new Headers({'Content-Type': 'application/json'});
 
@@ -25,8 +24,10 @@ export class HttpService{
    */
   setParams(param: Params[]){
     let params = new URLSearchParams();
-    for(var i = 0; i < param.length; i++){
-      params.set(param[i].key, param[i].value);
+    if(param != null){
+      for(var i = 0; i < param.length; i++){
+        params.set(param[i].key, param[i].value);
+      }
     }
     this.options = new RequestOptions({ headers: this.headers, search : params });
   }
@@ -42,8 +43,10 @@ export class HttpService{
     params.set('action', 'opensearch');
     params.set('format', 'json');
     params.set('callback', 'JSONP_CALLBACK');
-    for(var i = 0; i < param.length; i++){
-      params.set(param[i].key, param[i].value);
+    if(param != null){
+      for(var i = 0; i < param.length; i++){
+        params.set(param[i].key, param[i].value);
+      }
     }
     this.options = new RequestOptions({ headers: this.headers, search : params });
   }
@@ -52,64 +55,13 @@ export class HttpService{
    * 获取数据
    * @returns {Promise<TResult|T>}
    */
-  get(url:string, param: Params[]):Promise<Object>{
+  /*get(url:string, param: Params[]):Promise<Object>{
     this.setParams(param);
     return this.http.get(url, this.options)  //http.get返回一个 RxJS 的Observable对象
       .toPromise()  //toPromise操作符把Observable直接转换成Promise对象
       .then(response => response.json().data as Object[]) //在 promise 的then回调中，我们调用 HTTP 的Reponse对象的json方法，以提取出其中的数据。
       .catch(this.handleError);
-  }
-
-  /**
-   * 更新数据
-   * @param obj
-   * @returns {Promise<TResult|T>}
-   */
-  put(url:string, param: Params[]): Promise<Object>{
-    this.setParams(param);
-    return this.http.put(url, this.options)
-      .toPromise()
-      .then(() => param)
-      .catch(this.handleError);
-  }
-
-  /**
-   * 添加数据
-   * @param obj
-   * @returns {Promise<TResult|T>}
-   */
-  post(url:string, param: Params[]): Promise<Object>{
-    this.setParams(param);
-    return this.http.post(url, this.options)
-      .toPromise()
-      .then(response => response.json().data)
-      .catch(this.handleError);
-  }
-
-  /**
-   * 删除数据
-   * @param obj
-   * @returns {Promise<TResult|T>}
-   */
-  delete(url:string, param: Params[]):Promise<Object>{
-    this.setParams(param);
-    return this.http.delete(url, this.options)
-      .toPromise()
-      .then(() => null)
-      .catch(this.handleError);
-  }
-
-
-  /**
-   * 获取数据
-   * @returns {Observable<R>}
-   */
-  getObject(url:string, param: Params[]): Observable<Object[]> {
-    this.setParams(param);
-    return this.http.get(url)
-      .map(this.extractData)
-      .catch(this.handleError);
-  }
+  }*/
 
   /**
    * 添加数据
@@ -118,7 +70,42 @@ export class HttpService{
    */
   postObject (url:string, param: Params[]): Observable<Object> {
     this.setParams(param);
-    return this.http.post(url, { name }, this.options)
+    return this.http.post(url, this.options)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+  /**
+   * 删除数据
+   * @param obj
+   * @returns {Promise<TResult|T>}
+   */
+  delete(url:string, param: Params[]):Observable<Object[]>{
+    this.setParams(param);
+    return this.http.delete(url, this.options)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+  /**
+   * 获取数据
+   * @returns {Observable<R>}
+   */
+  get(url:string, param: Params[]): Observable<Object[]> {
+    this.setParams(param);
+    return this.http.get(url)//this.options
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+  /**
+   * 更新数据
+   * @param obj
+   * @returns {Promise<TResult|T>}
+   */
+  put(url:string, param: Params[]): Observable<Object>{
+    this.setParams(param);
+    return this.http.put(url, this.options)
       .map(this.extractData)
       .catch(this.handleError);
   }
@@ -128,10 +115,11 @@ export class HttpService{
    * @param term
    * @returns {Observable<R>}
    */
-  getJsonp(url : string, term : string, param: Params[]){
+  getJsonp(url : string, term : string, param: Params[]): Observable<Object>{
     this.setJsonpParams(term, param);
     return this.jsonp.get(url, this.options)
-      .map(response => <String[]> response.json());
+      .map(response => <String[]> response.json())
+      .catch(this.handleError);
   }
 
   /**
@@ -141,7 +129,7 @@ export class HttpService{
    */
   private extractData(res: Response) {
     let body = res.json();
-    return body.data || { };
+    return body || { };
   }
 
   /**

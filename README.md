@@ -1,5 +1,15 @@
 # MyAngular
 
+# 功能进度
+（1）导航路由\n
+路由配置请参考app.routing.ts文件。
+在html文件中必须有`<a routerLink="路径" routerLinkActive="active">首页</a>` 以及 `<router-outlet></router-outlet>`内容，路由才能生效，具体请参考app.component.html文件。
+（2）http请求\n
+http服务类请参考http.service.ts，所有需要使用http请求的模块，只要继承HttpService就可以直接调用里面的方法。
+前后端分离，进行请求时涉及到跨域请求，需要在后端设置response的header `response.setHeader("Access-Control-Allow-Origin", "*")`;
+使用方式请参考home.component.ts文件
+
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
 ## Development server
