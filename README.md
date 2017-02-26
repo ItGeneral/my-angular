@@ -10,8 +10,8 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 `路由守卫使用方式`：请参见app.routing.ts中的`{path:'home', component: HomeComponent, canActivate:[AuthGuard]}`
 
 ### http请求
-http服务类请参考http.service.ts，所有需要使用http请求的模块，只要继承HttpService就可以直接调用里面的方法；
-前后端分离，进行请求时涉及到跨域请求，需要在后端设置response的header `response.setHeader("Access-Control-Allow-Origin", "*")`；
+http服务类请参考http.service.ts，所有需要使用http请求的模块，只要继承HttpService就可以直接调用里面的方法；  
+前后端分离，进行请求时涉及到跨域请求，需要在后端设置response的header `response.setHeader("Access-Control-Allow-Origin", "*")`；  
 使用方式请参考home.component.ts文件。
 
 ## Development server
