@@ -8,6 +8,7 @@ import {appRouting} from "./app.routing";
 import {UserModule} from "./user/user.module";
 import {AboutModule} from "./about/about.module";
 import {HttpService} from "./http.service";
+import {AuthGuard} from "./auth.guard";
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import {HttpService} from "./http.service";
     AboutModule
   ],
   bootstrap: [AppComponent], //指定应用的主视图, 它是所有其它视图的宿主
-  providers : [HttpService]  //服务的创建者，并加入到全局服务列表中，可用于应用任何部分
+  providers : [HttpService, AuthGuard]  //服务的创建者，并加入到全局服务列表中，可用于应用任何部分
 })
 export class AppModule {
 

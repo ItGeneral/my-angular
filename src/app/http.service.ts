@@ -56,13 +56,13 @@ export class HttpService{
    * 获取数据
    * @returns {Promise<TResult|T>}
    */
-  gets(url:string, param: Params[]):Promise<Object>{
+  /*gets(url:string, param: Params[]):Promise<Object>{
     this.setParams(param);
     return this.http.get(url)  //http.get返回一个 RxJS 的Observable对象, this.options
       .toPromise()  //toPromise操作符把Observable直接转换成Promise对象
-      //.then(response => response.json().data as Object[]) //在 promise 的then回调中，我们调用 HTTP 的Reponse对象的json方法，以提取出其中的数据。
+      .then(response => response.json().data as Object[]) //在 promise 的then回调中，我们调用 HTTP 的Reponse对象的json方法，以提取出其中的数据。
       .catch(this.handleError);
-  }
+  }*/
 
   /**
    * 添加数据

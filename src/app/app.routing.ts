@@ -7,7 +7,7 @@
 import {ModuleWithProviders} from "@angular/core";
 import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import {AuthGuard} from "./user/auth.guard";
+import {AuthGuard} from "./auth.guard";
 
 //loadChildren实现懒加载
 //canActive 路由守卫， 如下所示，添加canActivate后，HomeComponent就被设置了访问权限
