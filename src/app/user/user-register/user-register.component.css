@@ -1,0 +1,14 @@
+.tips{
+  color: #9a9a9a;
+}
+.warn{
+  color: #e15f63;
+}
+.form-horizontal{
+  margin-top: 50px;
+  width: 80%;
+  border-right: 1px solid #e7e7eb;
+}
+.control-label{
+  color: #353535;
+}

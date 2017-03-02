@@ -38,3 +38,9 @@ nav a{
 .notActive{
   background-color: #fff;
 }
+
+.about-main{
+  padding-top: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e7e7eb;
+}
