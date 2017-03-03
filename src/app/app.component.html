@@ -1,4 +1,4 @@
-<div class="about-main">
+<!--<div class="about-main">
     <ul class="nav nav-pills nav-justified" role="tablist">
         <li role="presentation" [ngClass]="{active: isOn, notActive: isDisabled}" (click)="toggleNav(!isOn)">
           <a routerLink="/home" routerLinkActive="active">首页</a>
@@ -10,6 +10,14 @@
           <a routerLink="/users" routerLinkActive="active">用户</a>
         </li>
     </ul>
+</div>-->
+
+<div>
+  <ul class="am-nav am-nav-pills">
+    <li class="am-active"><a routerLink="/home" routerLinkActive="active">首页</a></li>
+    <li><a href="#"><a routerLink="/about" routerLinkActive="active">关于</a></a></li>
+    <li><a href="#"><a routerLink="/users" routerLinkActive="active">用户</a></a></li>
+  </ul>
 </div>
 
 <div class="main-container">
