@@ -2,9 +2,9 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
 ##运行流程
-（1）代码pull下来后，先安装angular2，执行命令：`npm install`；看到项目中有`node_modules`文件后，说明就安装成功了
-（2）安装完成后，运行项目：`ng serve`
-（3）访问`http://localhost:4200/`浏览页面
+（1）代码pull下来后，先安装angular2，执行命令：`npm install`；看到项目中有`node_modules`文件后，说明就安装成功了  
+（2）安装完成后，运行项目：`ng serve`  
+（3）访问`http://localhost:4200/`浏览页面  
 
 
 ## 功能进度
