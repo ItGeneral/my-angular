@@ -1,1 +1,5 @@
 /* Write your styles */
+.am-container {
+  width: 980px !important;
+  max-width: none;
+}
