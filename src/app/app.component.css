@@ -18,7 +18,7 @@ nav a{
   min-height: 800px;
   text-align: center;
 }
-.footer {
+/*.footer {
   text-align: left;
   padding: 40px 48px;
   background: #263238;
@@ -27,7 +27,7 @@ nav a{
   left: 0;
   right: 0;
   bottom: 0;
-}
+}*/
 .row{
   text-align: center;
 }

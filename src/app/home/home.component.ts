@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpService} from "../http.service";
+import {HttpService} from "../service/http.service";
 
 @Component({
   selector: 'app-home',
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     //subscribe()订阅数据
     this.httpService.get("http://localhost:8080/test", null).subscribe(data => {
       this.obj = data;
-      console.log(this.obj)
+      //console.log(this.obj)
     });
   }
 

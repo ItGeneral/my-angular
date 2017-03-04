@@ -1,7 +1,7 @@
 ///<reference path="../../node_modules/@angular/common/src/directives/ng_class.d.ts"/>
 import {Component,OnInit } from '@angular/core';
 import {NgClass} from '@angular/common';
-import {HttpService} from "./http.service";
+import {HttpService} from "./service/http.service";
 
 
 @Component({
@@ -12,17 +12,6 @@ import {HttpService} from "./http.service";
 })
 export class AppComponent extends HttpService implements OnInit{
 
-
   ngOnInit(): void {
-
-  }
-
-
-  isOn = true;
-  isDisabled = false;
-  toggleNav(newState){
-    if (!this.isDisabled) {
-      this.isOn = newState;
-    }
   }
 }

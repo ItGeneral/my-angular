@@ -7,15 +7,18 @@
 import {ModuleWithProviders} from "@angular/core";
 import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import {AuthGuard} from "./auth.guard";
+import {AuthGuard} from "./service/auth.guard";
+import {UserRegisterComponent} from "./user/user-register/user-register.component";
+import {UserLoginComponent} from "./user/user-login/user-login.component";
 
 //loadChildren实现懒加载
 //canActive 路由守卫， 如下所示，添加canActivate后，HomeComponent就被设置了访问权限
 const appRoutes: Routes = [
-  {path:'', redirectTo:'home', pathMatch:'full'},
-  {path:'home', component: HomeComponent, canActivate:[AuthGuard]},
-  {path:'about', loadChildren: './about/about.module#AboutModule'},
-  {path:'users', loadChildren: './user/user.module#UserModule'}
+  {path : '', redirectTo:'home', pathMatch:'full'},
+  {path : 'home', component: HomeComponent, canActivate:[AuthGuard]},
+  {path : 'register', component: UserRegisterComponent},
+  {path : 'login', component: UserLoginComponent},
+  {path : 'about', loadChildren: './about/about.module#AboutModule'}//懒加载
 ];
 
 export const appRouting:ModuleWithProviders  = RouterModule.forRoot(appRoutes);
