@@ -1,34 +1,53 @@
-<form class="form-horizontal" role="form">
-  <div class="form-group">
-    <label for="userName" class="col-sm-2 control-label">用户名</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="userName" placeholder="请输入用户名">
+<form class="am-form am-form-horizontal">
+  <!--class样式 am-form-success(成功) am-form-warning(警告) am-form-error(失败) 用来控制没有重复用户名后的显示样式 失去焦点后改变样式-->
+  <div class="am-form-group am-form-icon am-form-feedback">
+    <label for="doc-ipt-1" class="am-u-sm-3 am-form-label am-form-icon">用户名</label>
+    <div class="am-u-sm-9">
+      <input type="text" id="doc-ipt-1" class="am-radius" placeholder="输入你的用户名">
+      <!--<span class="am-icon-check"></span>-->
+      <!-- <span class="am-icon-warning"></span> -->
+      <!--<span class="am-icon-times"></span>-->
     </div>
   </div>
-  <div class="form-group">
-    <label for="password" class="col-sm-2 control-label">密码</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="password" placeholder="请输入密码">
+
+  <div class="am-form-group">
+    <label for="doc-ipt-pwd-2" class="am-u-sm-3 am-form-label">密码</label>
+    <div class="am-u-sm-9">
+      <input type="password" id="doc-ipt-pwd-2" class="am-radius" placeholder="设置一个密码吧">
     </div>
   </div>
-  <div class="form-group">
-    <label for="email" class="col-sm-2 control-label">邮箱地址</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="email" placeholder="请输入邮箱地址">
+
+  <div class="am-form-group">
+    <label for="doc-ipt-pwd-3" class="am-u-sm-3 am-form-label">确认密码</label>
+    <div class="am-u-sm-9">
+      <input type="password" id="doc-ipt-pwd-3" class="am-radius" placeholder="请重新输入一次密码">
     </div>
   </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-2">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox">请记住我
-        </label>
-      </div>
+
+  <div class="am-form-group">
+    <label for="doc-ipt-4" class="am-u-sm-3 am-form-label am-form-icon">邮箱</label>
+    <div class="am-u-sm-9">
+      <input type="email" id="doc-ipt-4" class="am-radius" placeholder="输入你的电子邮件">
     </div>
   </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-2">
-      <button type="submit" class="btn btn-default">登录</button>
+
+  <div class="am-form-group">
+    <label for="doc-ipt-5" class="am-u-sm-3 am-form-label am-form-icon">姓名</label>
+    <div class="am-u-sm-9">
+      <input type="text" id="doc-ipt-5" class="am-radius" placeholder="请留下您的大名">
+    </div>
+  </div>
+
+  <div class="am-form-group">
+    <label for="doc-ipt-6" class="am-u-sm-3 am-form-label am-form-icon">手机</label>
+    <div class="am-u-sm-9">
+      <input type="text" id="doc-ipt-6" class="am-radius" placeholder="请输入手机号码">
+    </div>
+  </div>
+
+  <div class="am-form-group">
+    <div class="am-u-sm-12">
+      <button type="submit" class="am-btn am-btn-default">注册</button>
     </div>
   </div>
 </form>
