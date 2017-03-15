@@ -1,17 +1,3 @@
-<!--<div class="about-main">
-    <ul class="nav nav-pills nav-justified" role="tablist">
-        <li role="presentation" [ngClass]="{active: isOn, notActive: isDisabled}" (click)="toggleNav(!isOn)">
-          <a routerLink="/home" routerLinkActive="active">首页</a>
-        </li>
-        <li role="presentation">
-          <a routerLink="/about" routerLinkActive="active">关于</a>
-        </li>
-        <li role="presentation" >
-          <a routerLink="/users" routerLinkActive="active">用户</a>
-        </li>
-    </ul>
-</div>-->
-
 <!--<div>
   <ul class="am-nav am-nav-pills">
     <li class="am-active"><a routerLink="/home" routerLinkActive="active">首页</a></li>
@@ -19,16 +5,28 @@
     <li><a href="#"><a routerLink="/users" routerLinkActive="active">用户</a></a></li>
   </ul>
 </div>-->
-
+<div>
+  <router-outlet></router-outlet>
+</div>
 <header class="am-topbar am-topbar-inverse am-topbar-fixed-top">
-  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}">
-    <span class="am-sr-only">导航切换</span>
-    <span class="am-icon-bars"></span>
-  </button>
-
-  <h1 class="am-topbar-brand">
+  <div data-am-collapse="{target: '#doc-topbar-collapse'}"></div>
+  <!-- am-hide-sm 在小屏幕中隐藏， am-show-sm 在小屏幕中显示-->
+  <h1 class="am-topbar-brand am-hide-sm">
     <a routerLink="/home" routerLinkActive="active" class="am-text-ir">Amaze UI</a>
   </h1>
+
+  <form class="am-topbar-form am-topbar-right am-form-inline am-show-sm" style="padding-top: 6px" role="search">
+    <div class="am-g">
+      <div class="am-u-lg-12">
+        <div class="am-input-group">
+          <input type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-success" type="button"><span class="am-icon-search"></span></button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </form>
 
   <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
@@ -50,6 +48,7 @@
       </li>
     </ul>
 
+
     <div class="am-topbar-right">
       <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
         <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle" data-am-dropdown-toggle>其他 <span class="am-icon-caret-down"></span></button>
@@ -69,10 +68,5 @@
   </div>
 </header>
 
-<div class="main-container">
-  <router-outlet></router-outlet>
-</div>
 
-<!--<footer class="footer">
-  Practice AngularJs2
-</footer>-->
+

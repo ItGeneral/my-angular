@@ -1,13 +1,4 @@
-  <div class="am-g">
-    <div class="am-u-lg-6">
-      <div class="am-input-group">
-        <span class="am-input-group-btn">
-          <input type="text" id="target" [(ngModel)]="target" class="am-form-field" required/>
-          <button class="am-btn am-btn-default" (click)="search()" type="button"><span class="am-icon-search"></span></button>
-        </span>
-      </div>
-    </div>
-  </div>
+
     <!--<div>
       <ul *ngFor="let item of obj; let i = index">
         <li>{{item.telephone}}</li>
@@ -16,3 +7,49 @@
         <li>{{item.email}}</li>
       </ul>
     </div>-->
+<!--
+<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+  <ul class="am-slides">
+    <li><img src="../../assets/img/4.jpg" /></li>
+    <li><a><img src="../../assets/img/5.jpg"></a></li>
+    <li><a><img src="../../assets/img/6.jpg"></a></li>
+    <li><a><img src="../../assets/img/7.jpg"></a></li>
+  </ul>
+</div>-->
+    <script type="text/javascript">
+      $(function(){
+        $('.am-slider').flexslider({
+          playAfterPaused: 3000,
+          animation: "fade",
+          animationLoop: true,
+          smoothHeight: true,
+          touch: true,
+          animationSpeed: 4000
+        });
+      });
+    </script>
+
+    <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{animation:slide, slideshow:false}' >
+      <ul class="am-slides">
+        <li>
+          <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg">
+          <div class="am-slider-desc">这是标题标题标题标题标题标题标题0</div>
+
+        </li>
+        <li>
+          <img src="http://s.amazeui.org/media/i/demos/bing-2.jpg">
+          <div class="am-slider-desc">这是标题标题标题标题标题标题标题1</div>
+
+        </li>
+        <li>
+          <img src="http://s.amazeui.org/media/i/demos/bing-3.jpg">
+          <div class="am-slider-desc">这是标题标题标题标题标题标题标题2</div>
+
+        </li>
+        <li>
+          <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg">
+          <div class="am-slider-desc">这是标题标题标题标题标题标题标题3</div>
+
+        </li>
+      </ul>
+    </div>

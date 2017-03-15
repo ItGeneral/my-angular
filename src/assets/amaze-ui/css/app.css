@@ -12,3 +12,6 @@
   -webkit-background-size: 125px 24px;
   background-size: 125px 24px;
 }
+.am-slider .am-slides img{
+  width: auto;
+}
