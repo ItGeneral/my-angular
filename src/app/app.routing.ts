@@ -10,11 +10,13 @@ import { HomeComponent } from './home/home.component';
 import {AuthGuard} from "./service/auth.guard";
 import {UserRegisterComponent} from "./user/user-register/user-register.component";
 import {UserLoginComponent} from "./user/user-login/user-login.component";
+import {AppComponent} from "./app.component";
 
 //loadChildren实现懒加载
 //canActive 路由守卫， 如下所示，添加canActivate后，HomeComponent就被设置了访问权限
 const appRoutes: Routes = [
-  {path : '', redirectTo:'home', pathMatch:'full'},
+  {path : '', redirectTo:'app', pathMatch:'full'},
+  {path : 'app', component: AppComponent},
   {path : 'home', component: HomeComponent, canActivate:[AuthGuard]},
   {path : 'register', component: UserRegisterComponent},
   {path : 'login', component: UserLoginComponent},

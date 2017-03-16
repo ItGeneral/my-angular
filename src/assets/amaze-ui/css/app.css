@@ -12,6 +12,14 @@
   -webkit-background-size: 125px 24px;
   background-size: 125px 24px;
 }
-.am-slider .am-slides img{
-  width: auto;
+
+.am-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1010;
 }
+.left{float: left}
+.right{float: right}

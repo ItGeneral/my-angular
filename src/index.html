@@ -51,5 +51,16 @@
   <script src="assets/amaze-ui/js/amazeui.ie8polyfill.min.js"></script>-->
   <!--<![endif]-->
   <script src="assets/amaze-ui/js/amazeui.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      <!-- 页脚导航 -->
+      $(".bottom-nav li").click(function() {
+        $(this).prevAll().removeClass("active");
+        $(this).nextAll().removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+  </script>
 </body>
 </html>

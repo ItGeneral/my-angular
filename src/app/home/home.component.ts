@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   //初始化加载时执行this.get()方法获取数据 http://localhost:8080/user
   ngOnInit(): void {
     //this.testHttp();
+    this.obj = [1,2,3,4,5,7,8,8,9,9,4,4,4,4];
   }
 
   testHttp(){

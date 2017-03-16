@@ -1,13 +1,3 @@
-<!--<div>
-  <ul class="am-nav am-nav-pills">
-    <li class="am-active"><a routerLink="/home" routerLinkActive="active">首页</a></li>
-    <li><a href="#"><a routerLink="/about" routerLinkActive="active">关于</a></a></li>
-    <li><a href="#"><a routerLink="/users" routerLinkActive="active">用户</a></a></li>
-  </ul>
-</div>-->
-<div>
-  <router-outlet></router-outlet>
-</div>
 <header class="am-topbar am-topbar-inverse am-topbar-fixed-top">
   <div data-am-collapse="{target: '#doc-topbar-collapse'}"></div>
   <!-- am-hide-sm 在小屏幕中隐藏， am-show-sm 在小屏幕中显示-->
@@ -67,6 +57,14 @@
     </div>
   </div>
 </header>
-
-
+<div class="app-content">
+  <router-outlet></router-outlet>
+</div>
+<!-- 页脚 -->
+<div class="bottom-nav">
+  <li class="active"><a routerLink="/home" routerLinkActive="active"><i class="am-icon-home "></i>首页</a></li>
+  <li><a href="javascript:;"><i class="am-icon-list"></i>分类</a></li>
+  <li><a href="javascript:;"><i class="am-icon-shopping-basket"></i>购物车</a></li>
+  <li><a href="javascript:;"><i class="am-icon-user"></i>我的</a></li>
+</div>
 
